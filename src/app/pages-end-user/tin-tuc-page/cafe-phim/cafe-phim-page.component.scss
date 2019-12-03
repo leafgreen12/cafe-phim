@@ -1,0 +1,140 @@
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/*----------------------detail khuyen mai-------------------------*/
+.audio-music h6.title-audio {
+  font-family: RobotoSlab-Regular;
+  font-size: 18px;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-top: 10px;
+  line-height: 27px;
+}
+
+.audio-music audio {
+  width: 100%;
+  height: 35px;
+}
+
+.sale-items {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.sale-items .date-sales-items {
+  width: 80px;
+  max-width: 80px;
+  margin-right: 20px;
+  min-width: 80px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 10px;
+  height: max-content;
+  margin-bottom: 20px;
+  border: 2px solid #e6e6e6;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 1px;
+  position: relative;
+}
+
+.sale-items .date-sales-items:before {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 35px;
+  width: 7px;
+  height: 7px;
+  background-color: #ffffff;
+  transform: rotate(-45deg);
+  z-index: 2;
+}
+
+.sale-items .date-sales-items:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-top-color: #e6e6e6;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+.sale-items .date-sales-items span {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.sale-items .date-sales-items span:first-child {
+  font-size: 24px;
+  color: #de903c;
+}
+
+.sale-items .date-sales-items span:last-child {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.panigation ul li {
+  display: inline;
+}
+
+.panigation ul li.active a {
+  background: #de903c;
+  color: #fff;
+  font-weight: normal;
+  border-color: #de903c;
+}
+
+.panigation ul li a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 0 5px 0 0;
+  line-height: 58px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 1px;
+  border: 2px solid #f2f2f2;
+  font-weight: bold;
+  color: #999999;
+}
+
+.panigation ul li a:hover {
+  background: #a2c046;
+  color: #fff;
+  border-color: #de903c;
+}
+
+.show-more-sale {
+  color: #de903c;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 25px;
+}
+
+/*----------------------end detail khuyen mai-------------------------*/
+

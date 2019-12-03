@@ -1,0 +1,35 @@
+<main *ngIf="content">
+
+  <div class="page-title-detail">
+    <div class="container">
+      <div class="row_pc">
+        <h3>{{content.title}}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="brecum-title-detail">
+    <div class="container">
+      <div class="row">
+        <ul>
+          <li><a href="#" title="">Cafe phim Hà Nội</a></li>
+          <li><a title="">{{content.title}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-page-content">
+    <div class="container">
+      <div class="row_pc">
+        <div class="col-detail-page-conent">
+          <div class="row row-flex">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div [innerHTML]="content.content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

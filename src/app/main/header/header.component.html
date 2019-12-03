@@ -1,0 +1,104 @@
+<header class="header">
+  <div class="menu_mb visible-xs visible-sm">
+    <button class="nav-toggle">
+      <span></span>
+    </button>
+    <a href="" class="logo_mb"><img class="img_logo_mb" src="../../../assets/img/logo.png" alt=""/></a>
+    <!-- search mobile -->
+    <div class="search_drop">
+      <a href="" class="btn_search"><i class="fa fa-search"></i></a>
+      <form class="form_search">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Tìm kiếm...">
+          <span class="input-group-btn">
+                <button class="btn btn-default" type="button">Tìm kiếm</button>
+            </span>
+        </div>
+      </form>
+    </div><!-- /search mobile -->
+  </div><!-- /menu_mb -->
+
+  <div class="header-top">
+    <div class="container">
+      <div class="row d-flex flex-space-bw">
+        <div class="header-top-name-system w_100">Hệ thống cafe phim phòng riêng hàng đầu Hà Nội</div>
+        <div class="header-top-info w_100 d-flex">
+          <div class="header-top-address"><i class="fa fa-home"></i>
+            <span *ngFor="let item of cineCafe">{{item.location}} / </span>
+          </div>
+          <div class="header-top-phone-number"><a href="#" title=""><i class="fa fa-phone"></i> 02473 033 088</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-mid">
+    <div class="container">
+      <div class="row">
+        <div class="menu_header">
+          <div class="row d-flex">
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 hidden-sm hidden-xs">
+              <a href="" class="logo_pc">
+                <img src="../../../assets/img/logo.png" alt="">
+              </a>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-9 col-xs-12 col-xs-12">
+              <!-- menu main -->
+              <div class="menu_main">
+                <nav class="nav is-fixed h-100">
+                  <div class="nav-container h-100">
+                    <ul class="nav-menu menu h-100">
+                      <li class="menu-item"><a routerLink="/" class="menu-link">Trang chủ</a></li>
+                      <li class="menu-item has-dropdown" [routerLinkActive]="['is-active']">
+                        <a routerLink="/cine-cafe" class="menu-link">Cine cafe</a>
+                        <ul class="nav-dropdown menu">
+                          <li class="menu-item" *ngFor="let item of cineCafe"><a routerLink="/cine-cafe/{{item.id}}" class="menu-link">{{item.title}}</a></li>
+<!--                          <li class="menu-item"><a routerLink="/cine-cafe/cafe-phim-xa-dan" class="menu-link">Cafe phim Xã Đàn</a></li>-->
+<!--                          <li class="menu-item"><a routerLink="/cine-cafe/cafe-phim-chua-lang" class="menu-link">Cafe phim Chùa Láng</a></li>-->
+<!--                          <li class="menu-item"><a routerLink="/cine-cafe/cafe-phim-ha-dong" class="menu-link">Cafe phim Hà Đông</a></li>-->
+                        </ul>
+                      </li>
+                      <li class="menu-item has-dropdown" [routerLinkActive]="['is-active']">
+                        <a routerLink="/dich-vu" class="menu-link ">Dịch vụ</a>
+                        <ul class="nav-dropdown menu">
+                          <li class="menu-item" *ngFor="let item of dichVuList"><a routerLink="/dich-vu/{{item.id}}" class="menu-link">{{item.title}}</a></li>
+<!--                          <li class="menu-item"><a routerLink="/dich-vu/xem-phim-gia-dinh" class="menu-link">Xem phim gia đình</a></li>-->
+<!--                          <li class="menu-item"><a routerLink="/dich-vu/to-chuc-su-kien-lang-man" class="menu-link">Tổ chức sự kiện lãng mạn</a></li>-->
+<!--                          <li class="menu-item"><a routerLink="/dich-vu/to-chuc-sinh-nhat" class="menu-link">Tổ chức sinh nhật</a></li>-->
+<!--                          <li class="menu-item"><a routerLink="/dich-vu/to-chuc-offline" class="menu-link">Tổ chức Offline</a></li>-->
+<!--                          <li class="menu-item"><a routerLink="/dich-vu/to-chuc-hoi-thao-hoc-nhom" class="menu-link">Tổ chức hội thảo, học nhóm</a></li>-->
+                        </ul>
+                      </li>
+                      <li class="menu-item" [routerLinkActive]="['is-active']">
+                        <a routerLink="/gia-phong" class="menu-link ">Giá phòng</a>
+                      </li>
+                      <li class="menu-item has-dropdown" [routerLinkActive]="['is-active']">
+                        <a routerLink="/dat-phong-cine-cafe" class="menu-link">Đặt phòng</a>
+                        <ul class="nav-dropdown menu">
+                          <li class="menu-item"><a routerLink="/chi-duong" class="menu-link">Chỉ đường</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-item" [routerLinkActive]="['is-active']">
+                        <a routerLink="/thuc-don" class="menu-link">Thực đơn</a>
+                      </li>
+                      <li class="menu-item" [routerLinkActive]="['is-active']">
+                        <a href="" class="menu-link">Phim</a>
+                      </li>
+                      <li class="menu-item has-dropdown" [routerLinkActive]="['is-active']">
+                        <a routerLink="/tin-tuc" class="menu-link">Tin tức</a>
+                        <ul class="nav-dropdown menu">
+                          <li class="menu-item"><a routerLink="/tin-tuc/khuyen-mai" class="menu-link">Khuyến mại</a></li>
+                          <li class="menu-item"><a routerLink="/tin-tuc/cafe-phim" class="menu-link">Cafe phim</a></li>
+                          <li class="menu-item"><a routerLink="/tin-tuc/tuyen-dung" class="menu-link">Tuyển dụng</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+              </div><!-- menu main -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header><!-- /.header content -->

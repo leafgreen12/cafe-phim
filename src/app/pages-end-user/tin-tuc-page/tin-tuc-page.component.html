@@ -1,0 +1,75 @@
+<main>
+
+  <div class="page-title-detail">
+    <div class="container">
+      <div class="row_pc">
+        <h3>Tin tức</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="brecum-title-detail">
+    <div class="container">
+      <div class="row_pc">
+        <ul>
+          <li><a href="#" title="">Cafe phim Hà Nội</a></li>
+          <li><a title="">Tin tức</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-page-content page-list-service">
+    <div class="container">
+      <div class="row_pc">
+
+        <div class="title-detail-news">
+          <h3 class="title-box-list"><span>Cafe</span> phim</h3>
+        </div>
+        <div class="col-detail-page-conent">
+          <div class="row row-flex">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-480-12" *ngFor="let item of cafePhimList">
+              <div class="box-item-basis list-news-item">
+                <div class="img-basis-item">
+                  <a routerLink="cafe-phim/{{item.id}}"  title="">
+                    <img src="{{item.image}}" alt="" class="w_100">
+                    <div class="date-post"><span>{{item.createdDate.toDate() | date:'dd/MM/yyyy'}}</span></div>
+                  </a>
+                </div>
+                <div class="text-basis-item">
+                  <h3 class="name-basis-item"><a routerLink="cafe-phim/{{item.id}}"  title="">{{item.title}}</a></h3>
+                  <p [innerHTML]="(item.content | slice:0:100 )+ '...' "></p>
+                  <a routerLink="cafe-phim/{{item.id}}" title="" class="btn-show-bottom-item">Xem tiếp</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix-20"></div>
+
+        <div class="title-detail-news">
+          <h3 class="title-box-list"><span>Khuyến</span> mại</h3>
+        </div>
+        <div class="col-detail-page-conent">
+          <div class="row row-flex">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-480-12" *ngFor="let item of khuyenMaiList">
+              <div class="box-item-basis list-news-item">
+                <div class="img-basis-item">
+                  <a routerLink="khuyen-mai/{{item.id}}" title="">
+                    <img src="{{item.image}}" alt="" class="w_100">
+                    <div class="date-post"><span>{{item.createdDate.toDate() | date:'dd/MM/yyyy'}}</span></div>
+                  </a>
+                </div>
+                <div class="text-basis-item">
+                  <h3 class="name-basis-item"><a routerLink="khuyen-mai/{{item.id}}" title="">{{item.title}}</a></h3>
+                  <p [innerHTML]="(item.content | slice:0:100)+ '...' "></p>
+                  <a routerLink="khuyen-mai/{{item.id}}" title="" class="btn-show-bottom-item">Xem tiếp</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

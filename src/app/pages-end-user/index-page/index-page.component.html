@@ -1,0 +1,154 @@
+<main>
+  <div class="container">
+    <div class="row_pc">
+      <ngb-carousel *ngIf="banners.length">
+        <ng-template ngbSlide *ngFor="let banner of banners">
+          <div class="picsum-img-wrapper">
+            <img [src]="banner.image" alt="Random first slide">
+          </div>
+        </ng-template>
+      </ngb-carousel>
+
+      <div class="box-info-intro text-center">
+        <h2>Cafe phim phòng riêng</h2>
+        <p>là hệ thống rạp chiếu phim mini hàng đầu Hà Nội được nhiều người yêu thích và lựa chọn hiện nay với chất
+          lượng dịch vụ đỉnh cao không thua kém gì các rap chiếu phim cỡ lớn.</p>
+        <a href="#" title="">Cafe phim</a>
+        <p>Mang tới trải nghiệm tuyệt vời không chỉ về điện ảnh mà còn cả về không gian kiến trúc, nghệ thuật ẩm thực.
+          Với dịch vụ cao cấp, sáng tạo và độc đáo của Cine café, chúng tôi tin bạn sẽ có những giờ phút tận hưởng “ Hơn
+          cả rạp chiếu
+          phim” tại đây.</p>
+        <h2>HOTLINE ĐẶT PHÒNG: 02473 033 088</h2>
+      </div>
+
+      <div class="box-link-book text-center maw-300">
+        <a routerLink="/dat-phong-cine-cafe" title=""><img src="../../../assets/img/img-book.png" alt=""></a>
+      </div>
+      <div class="list-basis">
+        <h3 class="title-box-list">04 cơ sở Cafe Phim với hơn 40 phòng chiếu</h3>
+        <div class="row row-17">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 col-480-12 padding-17" *ngFor="let item of cineCafe">
+            <div class="box-item-basis">
+              <div class="img-basis-item">
+                <img src="{{item.image}}" alt="" class="w_100">
+                <div class="overlay-btn-link">
+                  <a routerLink="/cine-cafe/{{item.id}}" title="Xem chi tiết">Xem tiếp</a>
+                </div>
+              </div>
+              <div class="text-basis-item">
+                <h3 class="name-basis-item"><a routerLink="/cine-cafe/{{item.id}}" title="">{{item.title}}</a></h3>
+                <p [innerHTML]="(item.content | slice:0:149)+ '...' ">Cafe phim Yên Lãng là cơ sở đầu tiên của Cine cafe –
+                  hệ thống rạp chiếu phim mini hàng đầu Hà Nội. Chính bởi là cơ sở đầu tiên nên nó...</p>
+                <a routerLink="/cine-cafe/{{item.id}}" title="" class="btn-show-bottom-item">Xem tiếp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="romantic-space">
+        <h3 class="title-box-list">Không gian lãng mạn</h3>
+        <img src="../../../assets/img/img-romantic-space.jpg" alt="" class="w_100">
+      </div>
+      <div class="box-link-book text-center maw-300">
+        <a routerLink="/dat-phong-cine-cafe" title=""><img src="../../../assets/img/img-book.png" alt=""></a>
+      </div>
+
+      <div class="services">
+        <h3 class="title-box-list">Dịch vụ đa dạng</h3>
+        <div class="row row-flex">
+          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 col-480-12" *ngFor="let item of dichVuList">
+            <div class="service-item">
+              <a href="#" title="" class="img-service-item">
+                <img src="{{item.image}}" alt="" class="w_100">
+              </a>
+              <div class="info-service-item">
+                <div class="name-service-item"><a routerLink="/dich-vu/{{item.id}}"  title="">{{item.title}}</a></div>
+<!--                <p [innerHTML]="(item.content | slice:0:149)+ '...' ">-->
+<!--                  Cafe phim CINE mang đến cho bạn không gian phim hoàn toàn riêng tư.-->
+<!--                  Ngả lưng ghế sofa rộng rãi-->
+<!--                </p>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="specal-food">
+        <h3 class="title-box-list">Ẩm thực độc đáo</h3>
+        <img src="../../../assets/img/specal-food.jpg" alt="" class="w_100">
+      </div>
+
+      <div class="col-box-info">
+        <div class="row row-flex row-16">
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-480-12 padding-16">
+            <div class="box-info-item">
+              <div class="name-box-info-item">
+                <i class="fa fa-user-plus"></i> <h6>Phòng chiếu riêng tư</h6>
+              </div>
+              <div class="box-info-content">
+                Phòng chiếu hoàn toàn riêng tư cho nhóm xem từ 2 đến 20 người
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-480-12 padding-16">
+            <div class="box-info-item">
+              <div class="name-box-info-item">
+                <i class="fa fa-film"></i> <h6>Kho phim đa dạng</h6>
+              </div>
+              <div class="box-info-content">
+                Phòng chiếu hoàn toàn riêng tư cho nhóm xem từ 2 đến 20 người
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-480-12 padding-16">
+            <div class="box-info-item">
+              <div class="name-box-info-item">
+                <i class="far fa-tv"></i> <h6>100% sử dụng màn chiếu</h6>
+              </div>
+              <div class="box-info-content">
+                Phòng chiếu hoàn toàn riêng tư cho nhóm xem từ 2 đến 20 người
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-480-12 padding-16">
+            <div class="box-info-item">
+              <div class="name-box-info-item">
+                <i class="fa fa-volume-up"></i> <h6>Âm thanh Home Theater</h6>
+              </div>
+              <div class="box-info-content">
+                Phòng chiếu hoàn toàn riêng tư cho nhóm xem từ 2 đến 20 người
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-480-12 padding-16">
+            <div class="box-info-item">
+              <div class="name-box-info-item">
+                <i class="far fa-calendar"></i> <h6>Thời gian linh hoạt</h6>
+              </div>
+              <div class="box-info-content">
+                Phòng chiếu hoàn toàn riêng tư cho nhóm xem từ 2 đến 20 người
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-480-12 padding-16">
+            <div class="box-info-item">
+              <div class="name-box-info-item">
+                <i class="fas fa-utensils"></i> <h6>Thực đơn phong phú</h6>
+              </div>
+              <div class="box-info-content">
+                Phòng chiếu hoàn toàn riêng tư cho nhóm xem từ 2 đến 20 người
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-link-book text-center">
+        <a routerLink="/dat-phong-cine-cafe" title=""><img src="../../../assets/img/img-fast-book.jpg" alt=""></a>
+      </div>
+
+    </div>
+  </div>
+
+</main>

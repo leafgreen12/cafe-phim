@@ -1,0 +1,56 @@
+<main>
+
+  <div class="page-title-detail">
+    <div class="container">
+      <div class="row_pc">
+        <h3>Dịch vụ</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="brecum-title-detail">
+    <div class="container">
+      <div class="row_pc">
+        <ul>
+          <li><a href="#" title="">Cafe phim Hà Nội</a></li>
+          <li><a title="">Dịch vụ</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-page-content page-list-service">
+    <div class="container">
+      <div class="row_pc">
+        <div class="col-detail-page-conent">
+          <div class="row row-flex">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-480-12" *ngFor="let item of dichVuList">
+              <div class="box-item-basis list-service-item">
+                <div class="img-basis-item">
+                  <img src="../../../assets/img/img-basis.jpg" alt="" class="w_100">
+                  <div class="overlay-btn-link">
+                    <a routerLink="/dich-vu/{{item.id}}" title="Xem chi tiết">Xem tiếp</a>
+                  </div>
+                </div>
+                <div class="text-basis-item">
+                  <h3 class="name-basis-item"><a routerLink="/dich-vu/{{item.id}}" title="">{{item.title}}</a></h3>
+                  <p>Cafe phim Yên Lãng là cơ sở đầu tiên của Cine cafe –
+                    hệ thống rạp chiếu phim mini hàng đầu Hà Nội. Chính bởi là cơ sở đầu tiên nên nó...</p>
+                  <a routerLink="/dich-vu/{{item.id}}" title="" class="btn-show-bottom-item">Xem tiếp</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 col-480-12">
+              <div class="tag-book-list-service">
+                <p>Đặt phòng Online để nhận Ưu đãi hấp dẫn</p>
+                <div class="button-book">
+                  <a href="#" title="">Đặt phòng</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

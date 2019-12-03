@@ -1,0 +1,25 @@
+<div class="header-container">
+  <div class="logo-container">
+    <a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
+      <nb-icon icon="menu-2-outline"></nb-icon>
+    </a>
+    <a class="logo" href="#" (click)="navigateHome()">Cine-<span>Cafe</span></a>
+  </div>
+  <nb-select [selected]="currentTheme" (selectedChange)="changeTheme($event)" status="primary">
+    <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ theme.name }}</nb-option>
+  </nb-select>
+</div>
+
+<div class="header-container">
+  <nb-actions size="small" *ngIf="auth.user | async as user">
+    <nb-action class="user-action" *nbIsGranted="['view', 'user']" >
+      <nb-user [name]="user.email"
+               [picture]="user?.imageUrl">
+      </nb-user>
+    </nb-action>
+  </nb-actions>
+  <div>
+    <button (click)="auth.logout()" nbButton hero status="primary">Logout</button>
+<!--    <button (click)="auth.createUserDataEmail()" nbButton hero status="primary">Create User</button>-->
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<main *ngIf="content">
+
+  <div class="page-title-detail">
+    <div class="container">
+      <div class="row_pc">
+        <h3>{{content.title}}</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="brecum-title-detail">
+    <div class="container">
+      <div class="row">
+        <ul>
+          <li><a href="#" title="">Cafe phim Hà Nội</a></li>
+          <li><a title="">{{content.title}}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-page-content">
+    <div class="container">
+      <div class="row_pc">
+        <div class="col-detail-page-conent">
+          <div class="row row-flex">
+            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+              <div class="w_100 hidden-content" >
+                <div [innerHTML]="content.content">
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+              <div class="more-info-right">
+                <ul class="list-option">
+                  <li><a routerLink="/dich-vu" title="" >Dịch vụ</a></li>
+                  <li><a routerLink="/dich-vu//{{item.id}}" *ngFor="let item of dichVuList">{{item.title}}</a></li>
+                </ul>
+
+                <div class="our-facebook">
+                  <div class="title-ofb">Facebook của chúng tôi</div>
+
+                  <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fcinecafehn%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="500" style="border:none;overflow:hidden"
+
+                          scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

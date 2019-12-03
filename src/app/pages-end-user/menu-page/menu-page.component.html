@@ -1,0 +1,27 @@
+<main>
+  <div class="page-title-detail">
+    <div class="container">
+      <div class="row_pc">
+        <h3>Thực Đơn</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="brecum-title-detail">
+    <div class="container">
+      <div class="row_pc">
+        <ul>
+          <li><a href="#" title="">Cafe phim Hà Nội</a></li>
+          <li><a title="">Thực Đơn</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-page-content page-list-service" *ngIf="content">
+    <div class="container">
+      <div class="row_pc" [innerHTML]="content.content">
+      </div>
+    </div>
+  </div>
+</main>

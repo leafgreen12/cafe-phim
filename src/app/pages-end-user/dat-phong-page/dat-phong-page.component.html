@@ -1,0 +1,33 @@
+<main class="detai-book-movie-room">
+  <div class="container">
+    <div class="row_pc">
+      <div class="title-book-movie-room">ĐẶT PHÒNG XEM PHIM</div>
+
+      <div class="row row-flex">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pdd-30">
+          <img src="../../../assets/img/img-book-movie-room.jpg" class="w_100" alt="">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pdd-30">
+          <form action="" class="form-book-movie-room text-center h-100" *ngIf="form" [formGroup]="form">
+            <div class="title-form-book-movie-room">
+              <p>ĐẶT PHÒNG ONLINE!</p>
+              <p>Chúng tôi sẽ gọi lại ngay khi nhận được thông tin!</p>
+            </div>
+
+            <div class="content-form-book">
+              <input type="text" name="" value="" formControlName="name" class="form-control" placeholder="Họ tên">
+              <input type="text" name="" value="" formControlName="phone" class="form-control" placeholder="Vui lòng nhập đúng số điện thoại của bạn">
+              <select class="form-control" formControlName="location">
+                <option *ngFor="let item of cineCafe">{{item.title}}</option>
+              </select>
+              <textarea class="form-control" formControlName="message" name="name" rows="8" cols="80" placeholder="Để lại lời nhăn cho chúng tôi"></textarea>
+
+              <button (click)="onSubmit()" [disabled]="form.invalid" class="btn button">Đặt phòng ngay !</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>

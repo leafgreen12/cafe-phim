@@ -1,0 +1,27 @@
+a{
+  &:hover{
+    text-decoration: none;
+  }
+}
+ul{
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+    a{
+      text-decoration: none;
+    }
+  }
+}
+
+.w_100 {
+  width: 100%;
+}
+img {
+  width: 100%;
+}
+.maw-300{
+  img{
+    max-width: 300px;
+  }
+}

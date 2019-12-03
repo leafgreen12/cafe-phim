@@ -1,0 +1,26 @@
+ul{
+  padding: 0;
+  margin: 0;
+  li {
+    list-style: none;
+    a{
+      text-decoration: none;
+    }
+  }
+}
+.hidden-content {
+  //overflow: hidden;
+}
+.w_100 {
+  width: 100%;
+}
+::ng-deep img {
+  width: 100%!important;
+}
+.col-detail-page-conent{
+  p{
+    img{
+      width: 100%;
+    }
+  }
+}

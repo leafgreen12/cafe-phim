@@ -1,0 +1,46 @@
+<main>
+
+  <div class="page-title-detail">
+    <div class="container">
+      <div class="row_pc">
+        <h3>Chỉ đường</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="brecum-title-detail">
+    <div class="container">
+      <div class="row_pc">
+        <ul>
+          <li><a href="#" title="">Cafe phim Hà Nội</a></li>
+          <li><a title="">Chỉ đường</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="detail-page-content">
+    <div class="container">
+      <div class="row_pc">
+        <div class="col-detail-page-conent">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" *ngFor="let item of cineCafe">
+              <div class="box-info-item tag-map">
+                <div class="name-box-info-item">
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                  <div class="info-map">
+                    <h6>{{item.title}}</h6>
+                    <div class="box-info-content">
+                      {{item.location}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img src="{{item.imageMap}}" class="w_100 mg-bottom-35" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

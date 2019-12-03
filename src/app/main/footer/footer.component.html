@@ -1,0 +1,80 @@
+<footer id="footer">
+  <div class="footer-mid">
+    <div class="container">
+      <div class="row">
+        <div class="col-footer-mid">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="col-footer-mid-item">
+                <div class="title-col-footer-mid">Cine Cafe</div>
+                <div class="content-col-footer-mid">
+                  <div class="list-adress-basis">
+                    <ng-container *ngFor="let item of cineCafe">
+                      <p><strong>{{item.title}}</strong></p>
+                      <p>{{item.location}}</p>
+                    </ng-container>
+                    <p><strong>Hotline 1: <a href="tel:02473033088">024 7303 3088</a></strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="col-footer-mid-item">
+                <div class="title-col-footer-mid">Dịch vụ</div>
+                <div class="content-col-footer-mid">
+                  <ul class="list-service-footer">
+                    <li><a routerLink="/dich-vu" title="">Dịch vụ</a></li>
+                    <li *ngFor="let item of dichVuList"><a routerLink="/dich-vu/{{item.id}}" title="">{{item.title}}</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="col-footer-mid-item">
+                <div class="title-col-footer-mid">Đơn vị chủ quản</div>
+                <div class="content-col-footer-mid">
+                  <div class="info-com-footer">
+                    <strong>CÔNG TY CỔ PHẦN HMORE VIỆT NAM </strong>
+                    <p>Giấy phép đăng ký kinh doanh số: 0106842990</p>
+                    <p>Sở kế hoạch đầu tư Hà Nội cấp ngày 11/05/2015</p>
+                    <strong>Chính sách bảo mật thông tin</strong>
+                    <div style="text-align: center;">
+                      <a href="#" title=""><img src="../../../assets/img/img-protected-footer.png" alt=""></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <div class="container">
+      <div class="row">
+        <div class="row w_100">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">Copyright 2015 Cine Cafe</div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center">Thiết kế bởi Hmore Việt nam</div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#top" id="go_top"><i class="fa fa-angle-up"></i></a>
+  <div class="link-fixed">
+    <ul class="">
+      <li><a href="#" data-toggle="tooltip" data-placement="left" title="Gọi ngay">
+        <img src="../../../assets/img/widget_icon_click_to_call.svg" class="w_100" alt="">
+      </a></li>
+      <li><a href="#" data-toggle="tooltip" data-placement="left" title="Chat ngay để nhận tư vấn">
+        <img src="../../../assets/img/widget_icon_messenger.svg" class="w_100" alt="">
+      </a></li>
+      <li><a href="#" data-toggle="tooltip" data-placement="left" title="Chat với chúng tôi qua zalo">
+        <img src="../../../assets/img/widget_icon_zalo.svg" class="w_100" alt="">
+      </a></li>
+    </ul>
+    <a href="#" title="" class="tag-fixed">powered by autoAds</a>
+  </div>
+
+</footer><!-- footer -->

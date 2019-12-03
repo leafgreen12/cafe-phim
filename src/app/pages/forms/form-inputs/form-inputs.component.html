@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-lg-12">
+    <nb-card *ngIf="form && param" [formGroup]="form">
+      <nb-card-header>Create Item</nb-card-header>
+      <nb-card-body>
+        <input *ngIf="param !== 'banners-ads'" formControlName="title" type="text" nbInput fullWidth placeholder="Title">
+        <input formControlName="image" type="text" nbInput fullWidth placeholder="Image">
+        <input *ngIf="param === 'cine-cafe' && param !== 'banners-ads'" formControlName="location" type="text" nbInput fullWidth placeholder="Location">
+        <input *ngIf="param === 'cine-cafe' && param !== 'banners-ads'" formControlName="imageMap" type="text" nbInput fullWidth placeholder="Image Map">
+      </nb-card-body>
+      <nb-card *ngIf="param !== 'banners-ads'">
+        <nb-card-header>
+          Content
+        </nb-card-header>
+        <nb-card-body>
+          <ckeditor formControlName="content" [config]="{ extraPlugins: 'divarea', height: '320' }"></ckeditor>
+        </nb-card-body>
+      </nb-card>
+      <button type="button" (click)="onSubmit()" [disabled]="form.invalid" nbButton [status]="'primary'" hero>
+        Save
+      </button>
+    </nb-card>
+  </div>
+</div>
