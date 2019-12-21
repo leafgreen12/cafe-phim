@@ -22,27 +22,29 @@ import {FormsModule as ngFormsModule, ReactiveFormsModule} from '@angular/forms'
 import {EditorsModule} from '../editors/editors.module';
 import {CKEditorModule} from 'ng2-ckeditor';
 import {Ng2SmartTableModule} from 'ng2-smart-table';
+import {NgxSpinnerModule} from "ngx-spinner";
 
 @NgModule({
-  imports: [
-    ThemeModule,
-    NbInputModule,
-    NbCardModule,
-    NbButtonModule,
-    NbActionsModule,
-    NbUserModule,
-    NbCheckboxModule,
-    NbRadioModule,
-    NbDatepickerModule,
-    FormsRoutingModule,
-    NbSelectModule,
-    NbIconModule,
-    ngFormsModule,
-    EditorsModule,
-    CKEditorModule,
-    ReactiveFormsModule,
-    Ng2SmartTableModule,
-  ],
+    imports: [
+        ThemeModule,
+        NbInputModule,
+        NbCardModule,
+        NbButtonModule,
+        NbActionsModule,
+        NbUserModule,
+        NbCheckboxModule,
+        NbRadioModule,
+        NbDatepickerModule,
+        FormsRoutingModule,
+        NbSelectModule,
+        NbIconModule,
+        ngFormsModule,
+        EditorsModule,
+        CKEditorModule,
+        ReactiveFormsModule,
+        Ng2SmartTableModule,
+        NgxSpinnerModule,
+    ],
   declarations: [
     FormsComponent,
     ButtonsComponent,

@@ -28,6 +28,8 @@ import {AngularFirestore} from '@angular/fire/firestore';
 import {environment} from '../environments/environment';
 import {AngularFireModule} from '@angular/fire';
 import {NgxAuthModule} from './pages/auth/auth.module';
+import {NgxSpinnerModule} from 'ngx-spinner';
+import {ToastrModule} from 'ngx-toastr';
 
 @NgModule({
   declarations: [AppComponent],
@@ -55,6 +57,8 @@ import {NgxAuthModule} from './pages/auth/auth.module';
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     ServiceModule.forRoot(),
+    NgxSpinnerModule,
+    ToastrModule.forRoot(),
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent],

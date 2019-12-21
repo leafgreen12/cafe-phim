@@ -1,6 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {FirebaseService} from '../../services/firebase.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'ngx-dat-phong-page',
@@ -15,6 +17,8 @@ export class DatPhongPageComponent implements OnInit {
 
   constructor(private firebaseService: FirebaseService,
               private fb: FormBuilder,
+              private spinner: NgxSpinnerService,
+              private toastr: ToastrService,
   ) { }
 
   onToggleMenu() {
@@ -43,7 +47,11 @@ export class DatPhongPageComponent implements OnInit {
       createdDate: date,
     });
     this.firebaseService.addItem('dat-phong', this.form.value);
-    this.form.reset();
+    this.spinner.show();
+    setTimeout( () => {
+      this.spinner.hide();
+      this.form.reset();
+      this.toastr.success('Đặt phòng thành công! Chúng tôi sẽ sớm liên hệ lại. Xin Cảm Ơn!');
+    }, 1200);
   }
-
 }

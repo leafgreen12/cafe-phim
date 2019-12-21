@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {FirebaseService} from '../../../services/firebase.service';
 import {ActivatedRoute, Router} from '@angular/router';
+import {NgxSpinnerService} from 'ngx-spinner';
+import {ToastrService} from 'ngx-toastr';
 
 @Component({
   selector: 'ngx-form-inputs-cine-cafe',
@@ -19,6 +21,8 @@ export class FormInputsComponent implements OnInit {
               private router: Router,
               private firebaseService: FirebaseService,
               private fb: FormBuilder,
+              private spinner: NgxSpinnerService,
+              private toastr: ToastrService,
   ) { }
 
   ngOnInit(): void {
@@ -84,11 +88,20 @@ export class FormInputsComponent implements OnInit {
     this.form.patchValue({
       content: this.form.value.content,
     });
+    this.spinner.show();
     if (this.queryParam) {
       this.firebaseService.updateItem(this.param, this.queryParam, this.form.value);
+      setTimeout( () => {
+        this.spinner.hide();
+        this.toastr.success('Cập Nhật Dữ Liệu Thành Công!');
+      }, 1200);
     } else {
       this.firebaseService.addItem(this.param, this.form.value);
       this.form.reset();
+      setTimeout( () => {
+        this.spinner.hide();
+        this.toastr.success('Lưu Dữ Liệu Thành Công!');
+      }, 1200);
     }
   }
 }

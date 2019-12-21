@@ -19,6 +19,8 @@
 @import './overrides';
 @import 'styles-main';
 
+@import '~ngx-toastr/toastr';
+
 // install the framework and custom global styles
 @include nb-install() {
 

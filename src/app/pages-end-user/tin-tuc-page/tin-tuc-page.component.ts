@@ -4,7 +4,7 @@ import {FirebaseService} from '../../services/firebase.service';
 @Component({
   selector: 'ngx-menu-page',
   templateUrl: './tin-tuc-page.component.html',
-  styleUrls: ['./tin-tuc-page.component.scss']
+  styleUrls: ['./tin-tuc-page.component.scss'],
 })
 export class TinTucPageComponent implements OnInit {
 

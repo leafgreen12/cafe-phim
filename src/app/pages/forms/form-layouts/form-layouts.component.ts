@@ -24,7 +24,7 @@ export class FormLayoutsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe(params => {
-      this.firebaseService.getItems(params.get('key')).subscribe( res => {
+      this.firebaseService.getItems(params.get('key'), 'createdDate').subscribe( res => {
         this.param = params.get('key');
         res.map( item => {
           item.createdDate = this.datePipe.transform(item.createdDate.toDate(), 'dd-MM-yyyy HH:mm:ss');
